@@ -19,7 +19,7 @@ function App() {
           <ShopKeeperNavbar />
           <Outlet />
         </div>) :
-        null
+        <Outlet />
       }
     </>
   )

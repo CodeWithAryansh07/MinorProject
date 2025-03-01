@@ -11,6 +11,8 @@ import PasswordReset from './components/PasswordReset.jsx';
 import ShopKeeperLandingPage from './pages/ShopKeeperLandingPage.jsx';
 import ShopKeeperVehicles from './components/ShopKeeperVehicles.jsx';
 import ShopKeeperBooking from './components/ShopKeeperBooking.jsx';
+import CarDescription from './components/CarDescription.jsx';
+import ViewAllCars from './components/ViewAllCars.jsx';
 
 
 const router = createBrowserRouter((
@@ -21,6 +23,8 @@ const router = createBrowserRouter((
       <Route path={'/login'} element={<Login />} />
       <Route path={'/otp-verification'} element={<OTPVerification />} />
       <Route path={'/forgot-password'} element={<PasswordReset />} />
+      <Route path={'/car-description'} element={<CarDescription />} />
+      <Route path={'/all-vehicles'} element={<ViewAllCars />} />
       <Route path={'/shopkeeper'}>
         <Route index element={<ShopKeeperLandingPage />} />
         <Route path={'vehicles'} element={<ShopKeeperVehicles />} />

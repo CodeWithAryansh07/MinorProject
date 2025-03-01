@@ -30,7 +30,7 @@ const Section = () => {
     return (
         <div className='relative w-full h-full max-[1200px]:h-auto bg-[#F6F8ED] flex flex-col items-center justify-center'>
             {/* Top Search Container */}
-            <div className='absolute -top-10 bg-[#FCFCFD]/97 w-11/12 md:w-10/12 lg:w-3/4 flex flex-wrap lg:flex-nowrap justify-between items-center p-4 rounded-lg px-4 md:px-8 lg:px-10 gap-2'>
+            <div className='absolute -top-10 bg-[#FCFCFD]/97 w-auto flex flex-wrap lg:flex-nowrap justify-between items-center p-4 rounded-lg px-4 md:px-8 lg:px-10 gap-2'>
                 <div className='flex flex-col gap-y-1 flex-1'>
                     <span className='text-lg font-semibold'>Pick-up Location</span>
                     <div className='flex p-2 rounded-2xl gap-x-3 bg-white border border-gray-200'>
@@ -52,7 +52,7 @@ const Section = () => {
                         />
                     </div>
                 </div>
-                <div className='flex flex-col gap-y-1 flex-1'>
+                {/* <div className='flex flex-col gap-y-1 flex-1'>
                     <span className='text-lg font-semibold'>Drop-off Location</span>
                     <div className='flex p-2 rounded-2xl gap-x-3 bg-white border border-gray-200'>
                         <MapPin className='text-black' />
@@ -72,8 +72,8 @@ const Section = () => {
                             placeholder='Select a date'
                         />
                     </div>
-                </div>
-                <div className='flex px-4 p-2 cursor-pointer bg-black rounded-2xl text-white text-nowrap justify-center items-center gap-x-2'>
+                </div> */}
+                <div className='flex px-4 p-2 ml-4 cursor-pointer bg-black rounded-2xl text-white text-nowrap justify-center items-center gap-x-2'>
                     <button className='cursor-pointer'>
                         Find a Vehicle
                     </button>
