@@ -1,13 +1,35 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { ArrowRight } from "lucide-react";
 import CarCard from "./CarCard";
 import { carData } from "../constants/index.js";
 import { Link } from "react-router-dom";
 import { useStore } from '../store/Store';
+import axios from 'axios';
 
 const CarSection = () => {
     const { isDarkMode } = useStore();
     const carSectionData = carData.slice(0, 6);
+
+    const allCars = useRef([]);
+
+    useEffect(() => {
+        const fetchAllCars = async () => {
+            try {
+                const VITE_BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
+                const response = await axios.get(`${VITE_BACKEND_URL}/api/vehicles`);
+                if (response.status === 201) {
+                    allCars.current = response.data;
+                    console.log(response.data);
+                } else {
+                    console.log("Error fetching data");
+                }
+            } catch (error) {
+                console.log(error);
+            }
+        }
+
+        fetchAllCars();
+    }, [])
 
     return (
         <div
