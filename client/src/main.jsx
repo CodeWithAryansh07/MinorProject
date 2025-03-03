@@ -13,6 +13,7 @@ import ShopKeeperVehicles from './components/ShopKeeperVehicles.jsx';
 import ShopKeeperBooking from './components/ShopKeeperBooking.jsx';
 import CarDescription from './components/CarDescription.jsx';
 import ViewAllCars from './components/ViewAllCars.jsx';
+import UserProfile from './components/UserProfile.jsx';
 
 
 const router = createBrowserRouter((
@@ -25,6 +26,7 @@ const router = createBrowserRouter((
       <Route path={'/forgot-password'} element={<PasswordReset />} />
       <Route path={'/car-description'} element={<CarDescription />} />
       <Route path={'/all-vehicles'} element={<ViewAllCars />} />
+      <Route path={'/profile'} element={<UserProfile />} />
       <Route path={'/shopkeeper'}>
         <Route index element={<ShopKeeperLandingPage />} />
         <Route path={'vehicles'} element={<ShopKeeperVehicles />} />

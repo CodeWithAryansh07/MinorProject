@@ -18,7 +18,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className={`w-full h-[100px] ${isDarkMode ? 'bg-[#000000]' : 'bg-white'} flex justify-between items-center px-2 sm:px-6 text-white lg:px-28 select-none transition-all duration-300`}>
+    <div className={`w-full h-[100px] ${isDarkMode ? 'bg-[#000000]' : 'bg-[#F6F8ED]'} flex justify-between items-center px-2 sm:px-6 text-white lg:px-28 select-none transition-all duration-300`}>
       <div>
         <img src='/Heading.png' className='w-auto h-auto' alt="Heading" />
       </div>

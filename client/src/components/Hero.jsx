@@ -7,7 +7,7 @@ const Hero = () => {
 
     return (
         <div
-            className={`w-full h-auto md:h-[calc(100vh-100px)] grid grid-cols-1 md:grid-cols-2 ${isDarkMode ? "bg-black" : "bg-white"
+            className={`w-full h-auto md:h-[calc(100vh-100px)] grid grid-cols-1 md:grid-cols-2 ${isDarkMode ? "bg-black" : "bg-[#F6F8ED]"
                 } px-4 md:px-20`}
         >
             {/* Left Section */}

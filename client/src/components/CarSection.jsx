@@ -1,16 +1,18 @@
-// import React from 'react'
-
-import { ArrowRight } from "lucide-react"
-import CarCard from "./CarCard"
-import { carData } from "../constants/index.js"
-import { Link } from "react-router-dom"
+import React from 'react';
+import { ArrowRight } from "lucide-react";
+import CarCard from "./CarCard";
+import { carData } from "../constants/index.js";
+import { Link } from "react-router-dom";
+import { useStore } from '../store/Store';
 
 const CarSection = () => {
-
-    const carSectionData = carData.slice(0, 6)
+    const { isDarkMode } = useStore();
+    const carSectionData = carData.slice(0, 6);
 
     return (
-        <div className="bg-[#F6F8ED] text-black flex flex-col gap-y-5 w-full h-auto items-center px-10 py-20">
+        <div
+            className={`${!isDarkMode ? "bg-gray-900 text-white" : "bg-[#F6F8ED] text-black"} flex flex-col gap-y-5 w-full h-auto items-center px-10 py-20 transition-all duration-300`}
+        >
             <div className="text-5xl font-bold">
                 Our Impressive Collection of Vehicles
             </div>
@@ -24,14 +26,18 @@ const CarSection = () => {
             </div>
             <div className="text-center text-md font-semibold">
                 <Link
-                to={'/all-vehicles'}
-                className="flex items-center justify-center cursor-pointer bg-[#F6F8ED] text-black w-full py-2 mt-5 px-10 rounded-xl border-2 border-black hover:bg-black hover:text-white">
+                    to={'/all-vehicles'}
+                    className={`flex items-center justify-center cursor-pointer ${!isDarkMode
+                            ? "bg-gray-800 text-white border-2 border-white hover:bg-white hover:text-gray-800"
+                            : "bg-[#F6F8ED] text-black border-2 border-black hover:bg-black hover:text-white"
+                        } w-full py-2 mt-5 px-10 rounded-xl transition-all duration-300`}
+                >
                     View All Cars
                     <ArrowRight size={24} className="inline-block ml-2" />
                 </Link>
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default CarSection
+export default CarSection;
