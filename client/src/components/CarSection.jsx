@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { ArrowRight } from "lucide-react";
 import CarCard from "./CarCard";
 import { carData } from "../constants/index.js";
